@@ -96,6 +96,7 @@ const questions = [
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
+const empty = document.querySelector('.empty');
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -152,6 +153,8 @@ function resetState(){
     questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
     nextButton.innerHTML = "Try Again";
     nextButton.style.display = "block";
+
+      empty.innerHTML = `<a href="../exam.html" class="btn btn-primary" style="text-decoration: none;">Back to Exam</a>`
  }
  function handleNextButton(){
     currentQuestionIndex++;
