@@ -1,101 +1,101 @@
 
 const questions = [
     {
-        question: "Which of the following is a noun word?",
+        question: "Which of the following is a noun?",
         answers: [
-            { text: "Eating", correct: false },
-            { text: "Car", correct: true },
-            { text: "Cookig", correct: false },
-            { text: "Counting", correct: false },
-
+            { text: "Run", correct: false },
+            { text: "Book", correct: true },
+            { text: "Quickly", correct: false },
+            { text: "Happy", correct: false },
         ]
     },
     {
-        question: "Which is the largest animal in the world?",
+        question: "Which word is an adjective?",
         answers: [
-            { text: "Shark", correct: false },
-            { text: "Blue whale", correct: true },
-            { text: "Elephant", correct: false },
-            { text: "Giraffe", correct: false },
-        ]
-
-    },
-    {
-        question: "Which of the following is a noun word?",
-        answers: [
-            { text: "Eating", correct: false },
-            { text: "Car", correct: true },
-            { text: "Cookig", correct: false },
-            { text: "Counting", correct: false },
+            { text: "Blue", correct: true },
+            { text: "Sing", correct: false },
+            { text: "Dog", correct: false },
+            { text: "Play", correct: false },
         ]
     },
     {
-        question: "Which of the following is a noun word?",
+        question: "Which of these is a verb?",
         answers: [
-            { text: "Eating", correct: false },
-            { text: "Car", correct: true },
-            { text: "Cookig", correct: false },
-            { text: "Counting", correct: false },
+            { text: "Jump", correct: true },
+            { text: "Chair", correct: false },
+            { text: "Green", correct: false },
+            { text: "Slowly", correct: false },
         ]
     },
     {
-        question: "Which of the following is a noun word?",
+        question: "Which word is a pronoun?",
         answers: [
-            { text: "Eating", correct: false },
-            { text: "Car", correct: true },
-            { text: "Cookig", correct: false },
-            { text: "Counting", correct: false },
+            { text: "He", correct: true },
+            { text: "Apple", correct: false },
+            { text: "Running", correct: false },
+            { text: "Tall", correct: false },
         ]
     },
     {
-        question: "Which of the following is a noun word?",
+        question: "Which of the following is a preposition?",
         answers: [
-            { text: "Eating", correct: false },
-            { text: "Car", correct: true },
-            { text: "Cookig", correct: false },
-            { text: "Counting", correct: false },
+            { text: "Under", correct: true },
+            { text: "Fast", correct: false },
+            { text: "Bird", correct: false },
+            { text: "Eat", correct: false },
         ]
     },
     {
-        question: "Which of the following is a noun word?",
+        question: "Which word is an adverb?",
         answers: [
-            { text: "Eating", correct: false },
-            { text: "Car", correct: true },
-            { text: "Cookig", correct: false },
-            { text: "Counting", correct: false },
+            { text: "Quickly", correct: true },
+            { text: "Table", correct: false },
+            { text: "Happy", correct: false },
+            { text: "Car", correct: false },
         ]
     },
     {
-        question: "Which of the following is a noun word?",
+        question: "Which of these words is a conjunction?",
         answers: [
-            { text: "Eating", correct: false },
-            { text: "Car", correct: true },
-            { text: "Cookig", correct: false },
-            { text: "Counting", correct: false },
+            { text: "And", correct: true },
+            { text: "Run", correct: false },
+            { text: "Book", correct: false },
+            { text: "Blue", correct: false },
         ]
     },
     {
-        question: "Which of the following is a noun word?",
+        question: "Which of the following is a plural noun?",
         answers: [
-            { text: "Eating", correct: false },
-            { text: "Car", correct: true },
-            { text: "Cookig", correct: false },
-            { text: "Counting", correct: false },
+            { text: "Cats", correct: true },
+            { text: "Dog", correct: false },
+            { text: "Run", correct: false },
+            { text: "Slow", correct: false },
         ]
     },
     {
-        question: "Which of the following is a noun word?",
+        question: "Which of these is a sentence?",
         answers: [
-            { text: "Eating", correct: false },
-            { text: "Car", correct: true },
-            { text: "Cookig", correct: false },
-            { text: "Counting", correct: false },
+            { text: "The sun is hot.", correct: true },
+            { text: "Running fast", correct: false },
+            { text: "Beautiful blue", correct: false },
+            { text: "Quickly slowly", correct: false },
+        ]
+    },
+    {
+        question: "Which of the following words starts with a vowel?",
+        answers: [
+            { text: "Apple", correct: true },
+            { text: "Ball", correct: false },
+            { text: "Cat", correct: false },
+            { text: "Dog", correct: false },
         ]
     }
 ];
+
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons"); // ✅ corrected name
 const nextButton = document.getElementById("next-btn");
+const empty = document.querySelector('.empty');
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -155,6 +155,7 @@ function showScore() {
     questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`; // ✅ fixed template string
     nextButton.innerHTML = "Try Again";
     nextButton.style.display = "block";
+      empty.innerHTML = `<a href="../exam.html" class="btn btn-primary" style="text-decoration: none;">Back to Exam</a>`
 }
 
 function handleNextButton() {
