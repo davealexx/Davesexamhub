@@ -72,6 +72,11 @@ body{
     font-weight: 700;
     text-shadow: 0 0 10px rgb(0, 0, 0, 0.3);
 }
+@media(max-width:456px){
+    .home-content h1{
+       font-size: 62px;
+    } 
+}
 .home-content p{
     font-size: 16px;
     text-align: center;
